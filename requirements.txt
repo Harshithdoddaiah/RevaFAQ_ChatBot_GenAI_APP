@@ -1,0 +1,7 @@
+langchain
+faiss-cpu
+langchain_community
+openai
+azure-data-tables
+langchain-openai
+streamlit
