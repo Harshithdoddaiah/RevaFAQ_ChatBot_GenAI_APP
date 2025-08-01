@@ -5,7 +5,7 @@ st.set_page_config(page_title="RevaFAQ Chatbot", layout="centered")
 st.title("🤖 RevaFAQ Chatbot")
 
 # Set environment variables (You may move these to st.secrets or OS env vars)
-os.environ["AZURE_AI_SEARCH_SERVICE_NAME"] = "revafaqaisearch"
+os.environ["AZURE_AI_SEARCH_SERVICE_NAME"] = "revafaqaisearchh"
 os.environ["AZURE_AI_SEARCH_INDEX_NAME"] = "azuretable-index"
 os.environ["AZURE_AI_SEARCH_API_KEY"] = st.secrets["AZURE_AI_SEARCH_API_KEY"]
 
