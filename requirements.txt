@@ -5,3 +5,5 @@ openai
 azure-data-tables
 langchain-openai
 streamlit
+beautifulsoup4
+selenium

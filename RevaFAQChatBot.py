@@ -5,7 +5,7 @@ st.set_page_config(page_title="RevaFAQ Chatbot", layout="centered")
 st.title("🤖 RevaFAQ Chatbot")
 
 # Set environment variables (You may move these to st.secrets or OS env vars)
-os.environ["AZURE_AI_SEARCH_SERVICE_NAME"] = "revafaqaisearchh"
+os.environ["AZURE_AI_SEARCH_SERVICE_NAME"] = "revafaqaisearch"
 os.environ["AZURE_AI_SEARCH_INDEX_NAME"] = "azuretable-index"
 os.environ["AZURE_AI_SEARCH_API_KEY"] = st.secrets["AZURE_AI_SEARCH_API_KEY"]
 
@@ -34,7 +34,7 @@ Question: {question}"""
 
 # --- Step 3: Azure OpenAI GPT LLM ---
 llm = AzureChatOpenAI(
-    api_version="2025-01-01-preview",
+    api_version="2024-12-01-preview",
     azure_endpoint=st.secrets["AZURE_OPENAI_ENDPOINT"],
     api_key=st.secrets["AZURE_OPENAI_API_KEY"],
     deployment_name=st.secrets["AZURE_DEPLOYMENT_NAME"]  # ✅ Replace with your real deployment name

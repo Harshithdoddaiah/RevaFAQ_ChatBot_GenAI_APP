@@ -6,7 +6,7 @@ from azure.data.tables import TableServiceClient, TableEntity
 
 # Set up your Azure Table Storage connection
 connection_string = st.secrets['AZURE_STORAGE_CONNECTION_STRING']
-table_name = "RevaFAQ"
+table_name = "revafaq"
 
 # Create a TableServiceClient
 table_service = TableServiceClient.from_connection_string(conn_str=connection_string)
@@ -18,7 +18,7 @@ except Exception as e:
     print(f"Table already exists: {e}")
 
 # Read the CSV file and upload the data
-csv_file_path = "reva_faq.csv"
+csv_file_path = "reva_complete_website_data.csv"
 
 with open(csv_file_path,  encoding='utf-8') as file:
     reader = csv.DictReader(file)
@@ -27,9 +27,9 @@ with open(csv_file_path,  encoding='utf-8') as file:
         # Create a new entity
         entity = TableEntity()
         entity['PartitionKey'] = "REVAFAQ"  # You can set this to whatever makes sense
-        entity['RowKey'] = row['id']  # Use ID as RowKey
-        entity['Question'] = row['question']
-        entity['Answer'] = row['answer']
+        entity['RowKey'] = row['ID']  # Use ID as RowKey
+        entity['Question'] = row['Title']
+        entity['Answer'] = row['Content']
 
         # Upload the entity to the table
         try:
