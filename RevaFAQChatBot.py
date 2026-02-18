@@ -1,8 +1,8 @@
 import streamlit as st
 import os
 
-st.set_page_config(page_title="RevaFAQ Chatbot", layout="centered")
-st.title("🤖 RevaFAQ Chatbot")
+st.set_page_config(page_title="REVAFAQ Chatbot", layout="centered")
+st.title("🤖 REVAFAQ Chatbot")
 
 # Set environment variables (You may move these to st.secrets or OS env vars)
 os.environ["AZURE_AI_SEARCH_SERVICE_NAME"] = "revafaqaisearch"
